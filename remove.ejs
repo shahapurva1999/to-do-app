@@ -1,0 +1,32 @@
+<html  >
+    <head>
+        <link href="/assets/style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div id="main-box">
+            <div id="logo">To-do App </div>
+            <br>
+            <form method="POST" action="/remove">
+                <!-- <input type="checkbox" name="test"/>test<br> -->
+
+                <% if(data.length == 0){ %>
+                    <h3>No To-dos !</h3><br>
+                    <input type="submit" value="Back"/>
+                <% }else{ %>    
+                <% data.forEach(function(item){ %>
+                    <h3><input type="checkbox" name="<%= item.title %>" value="defined"/> <%= item.title %></h3>
+                    <hr>
+                    <% }); %>
+                    <input type="submit" value="remove"/>
+                    <% }; %>  
+                        
+
+                <!-- <% data.forEach(function(item){ %>
+                    <h3><input type="checkbox" name="<%= item.title %>" value="defined"/> <%= item.title %></h3>
+                    <hr>
+                <% }); %> 
+                <input type="submit" value="submit"/> -->
+            </form>
+        </div>
+    </body>
+</html>

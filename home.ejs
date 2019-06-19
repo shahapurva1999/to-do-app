@@ -1,0 +1,24 @@
+<html  >
+    <head>
+        <link href="/assets/style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div id="main-box">
+                <div id="logo">To-do App<sup style="font-size: 10px;">TM</sup> </div>
+                <br>
+        <a href="add">Add</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="remove">Remove</a>
+        <br>
+        <h2 ><u>Title</u></h2>
+        <% if(data.length == 0){ %>
+            <h3>No To-dos !</h3><br>
+        <% }else{ %>    
+        <% data.forEach(function(item){ %>
+                <h3> <%= item.title %></h3>
+                <hr>
+            <% });}; %>
+            <footer style="font-family: 'Times New Roman', Times, serif; padding-top:5px; ">All rights reserved. Darkrai Inc.</footer>   
+        </div>
+         
+    </body>
+</html>
